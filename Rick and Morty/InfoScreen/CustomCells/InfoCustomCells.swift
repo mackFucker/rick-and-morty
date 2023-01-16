@@ -41,8 +41,6 @@ final class InfoCustomCells: UICollectionViewCell {
         super.updateConstraints()
 
         NSLayoutConstraint.activate([
-//            text.centerXAnchor.constraint(equalTo: centerXAnchor),
-//            text.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 20),
             text.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
             text.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
             text.bottomAnchor.constraint(equalTo: bottomAnchor),

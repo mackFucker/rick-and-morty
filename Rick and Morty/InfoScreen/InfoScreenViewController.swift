@@ -64,25 +64,25 @@ extension InfoScreenViewController: UICollectionViewDataSource {
                 (cell as!  CustomImageCell).setup(viewModel: data.image)
             case (1,0):
                 cell = collectionView.dequeueReusableCell(withReuseIdentifier: InfoCustomCells.identifer, for: indexPath)
-                (cell as! InfoCustomCells).setup(viewModel: data.origin)
+                (cell as! InfoCustomCells).setup(viewModel: data.origin, headerData: "origin")
             case (1,1):
                 cell = collectionView.dequeueReusableCell(withReuseIdentifier: InfoCustomCells.identifer, for: indexPath)
-                (cell as! InfoCustomCells).setup(viewModel: data.location)
+                (cell as! InfoCustomCells).setup(viewModel: data.location, headerData: "location")
             case (2,0):
                 cell = collectionView.dequeueReusableCell(withReuseIdentifier: InfoCustomCells.identifer, for: indexPath)
-                (cell as! InfoCustomCells).setup(viewModel: data.gender)
+                (cell as! InfoCustomCells).setup(viewModel: data.gender, headerData: "gender")
             case (2,1):
                 cell = collectionView.dequeueReusableCell(withReuseIdentifier: InfoCustomCells.identifer, for: indexPath)
-                (cell as! InfoCustomCells).setup(viewModel: data.species)
+                (cell as! InfoCustomCells).setup(viewModel: data.species, headerData: "species")
             case (3,0):
                 cell = collectionView.dequeueReusableCell(withReuseIdentifier: InfoCustomCells.identifer, for: indexPath)
-                (cell as! InfoCustomCells).setup(viewModel: data.type)
+                (cell as! InfoCustomCells).setup(viewModel: data.type, headerData: "type")
             case (3,1):
                 cell = collectionView.dequeueReusableCell(withReuseIdentifier: InfoCustomCells.identifer, for: indexPath)
-                (cell as! InfoCustomCells).setup(viewModel: data.status)
+                (cell as! InfoCustomCells).setup(viewModel: data.status, headerData: "satus")
             default:
                 cell = collectionView.dequeueReusableCell(withReuseIdentifier: InfoCustomCells.identifer, for: indexPath)
-                (cell as! InfoCustomCells).setup(viewModel: data.origin)
+                (cell as! InfoCustomCells).setup(viewModel: data.origin, headerData: "origin")
                 break
         }
         return cell
