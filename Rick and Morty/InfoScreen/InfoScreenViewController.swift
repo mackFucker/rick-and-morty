@@ -11,15 +11,16 @@ final class InfoScreenViewController: UIViewController {
     
     private let infoScreenView: InfoScreenViewInput
     
-    private var data: ViewModel
+    private let data: ViewModel
     
     var notesRepository: ModelDelegate = ModelDataSource.shared
     
     init(infoScreenView: InfoScreenViewInput, data: ViewModel) {
         self.infoScreenView = infoScreenView
         self.data = data
-        print(data)
+        
         super.init(nibName: nil, bundle: nil)
+        
         self.title = data.name
         
         infoScreenView.setCollectionViewSources(source: self)
@@ -89,10 +90,6 @@ extension InfoScreenViewController: UICollectionViewDataSource {
     }
 }
 
-extension InfoScreenViewController: UICollectionViewDelegate {
-    
-}
-
 extension InfoScreenViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         var size: CGSize
@@ -116,7 +113,6 @@ extension InfoScreenViewController: UICollectionViewDelegateFlowLayout {
                 break
         }
         return edgeInsets
-       
     }
 }
 
